@@ -25,8 +25,6 @@ import {
   FooterComponent,
   HeaderComponent,
   SearchInputComponent,
-  ThemeSettingsComponent,
-  ThemeSwitcherComponent,
   TinyMCEComponent,
 } from './components';
 import { CapitalizePipe, PluralPipe, RoundPipe, TimingPipe } from './pipes';
@@ -38,7 +36,6 @@ import {
 } from './layouts';
 import { DEFAULT_THEME } from './styles/theme.default';
 import { COSMIC_THEME } from './styles/theme.cosmic';
-import { CUSTOM_THEME } from './styles/theme.custom';
 
 const BASE_MODULES = [CommonModule, FormsModule, ReactiveFormsModule];
 
@@ -60,11 +57,9 @@ const NB_MODULES = [
 ];
 
 const COMPONENTS = [
-  ThemeSwitcherComponent,
   HeaderComponent,
   FooterComponent,
   SearchInputComponent,
-  ThemeSettingsComponent,
   TinyMCEComponent,
   OneColumnLayoutComponent,
   SampleLayoutComponent,
@@ -82,9 +77,9 @@ const PIPES = [
 const NB_THEME_PROVIDERS = [
   ...NbThemeModule.forRoot(
     {
-      name: 'custom',
+      name: 'default',
     },
-    [ DEFAULT_THEME, COSMIC_THEME, CUSTOM_THEME ],
+    [ DEFAULT_THEME, COSMIC_THEME ],
   ).providers,
   ...NbSidebarModule.forRoot().providers,
   ...NbMenuModule.forRoot().providers,
