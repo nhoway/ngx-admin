@@ -27,7 +27,8 @@ import 'rxjs/add/operator/delay';
       <nb-sidebar class="menu-sidebar"
                    tag="menu-sidebar"
                    responsive
-                   [right]="sidebar.id === 'right'">
+                   [right]="sidebar.id === 'right'"
+                   state="compacted">
         <ng-content select="nb-menu"></ng-content>
       </nb-sidebar>
 

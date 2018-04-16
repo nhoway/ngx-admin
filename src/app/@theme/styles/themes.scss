@@ -8,6 +8,14 @@ $nb-enabled-themes: (default, cosmic);
 
 $nb-themes: nb-register-theme((
  // app wise variables for each theme
+  header-bg: #222d32,
+  header-fg: #ffffff,
+  sidebar-bg: #222d32,
+  sidebar-fg: #ffffff,
+  menu-bg: #222d32,
+  menu-fg: #ffffff,
+
+  header-shadow: none,
   sidebar-header-gap: 0rem,
   sidebar-header-height: initial,
   layout-content-width: 1400px,
